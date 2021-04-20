@@ -1,0 +1,47 @@
+﻿@model List<WebLib.Product>
+
+@{
+    ViewBag.Title = "Liste des produits";
+}
+
+<table class="table table-striped">
+    <tr>
+        <td>Nom</td>
+        <td>Prix</td>
+        <td>Quantité</td>
+        <td>Actions</td>
+    </tr>
+
+    @foreach (var product in Model)
+    {
+        <tr id="@product.ID">
+            @*<td>@product.ID</td>*@
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td>@product.Quantity</td>
+            <td>
+                <a id="edit-@product.ID" class="btn btn-sm btn-rounded title-nav" href="@Url.Action("EditProduct", "Product", new { ID = product.ID })" role="button"><i class="fas fa-edit"></i></a>
+                <a id="delete-@product.ID" onclick="delete_product('@product.ID')" class="btn btn-sm btn-rounded title-nav delete-btn" href="#!" role="button"><i class="fas fa-trash"></i></a>
+            </td>
+        </tr>
+    }
+</table>
+
+<script type="text/javascript">
+
+    function delete_product(id) {
+        $('#delete-' + id).addClass('disabled');
+        $.ajax({
+            type: "POST",
+            url: "/Product/DeleteProduct",
+            data: JSON.stringify({ ID: id }),
+            dataType: "text",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                if (result == 'true') {
+                    $('#' + id).fadeOut("slow");
+                }
+            }
+        });
+    }
+</script>

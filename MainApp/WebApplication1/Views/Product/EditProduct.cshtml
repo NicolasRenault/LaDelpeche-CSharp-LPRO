@@ -1,0 +1,34 @@
+﻿@model WebLib.Product
+
+@{
+    ViewBag.Title = "Édition de produit";
+}
+
+@helper MdbHelper(string type, string id, string value)
+{
+    if (value == null)
+    {
+        value = id;
+    }
+    <div class="form-outline">
+        <label class='form-label' for="@id">@id</label>
+        <input type="@type" id="@id" name="@id" class="form-control" value="@value" placeholder="@id" />
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(r => r.ID)
+
+    @MdbHelper("text", "Name", Model.Name)
+
+    @MdbHelper("number", "Price", Model.Price.ToString())
+
+    @MdbHelper("number", "Quantity", Model.Quantity.ToString())
+
+    <br />
+
+    <div class="form-outline">
+        <button type="submit" class="btn btn-sm btn-rounded title-nav" style="font-size:15px">Enregistrer</button>
+    </div>
+}

@@ -1,0 +1,27 @@
+﻿@model AppliWeb1.Models.AuthentificationFormulaire
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model => model.Login)
+        @Html.EditorFor(model => model.Login)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Password)
+        @Html.EditorFor(model => model.Password)
+    </div>
+    <div>
+        <input type="submit" value="Se connecter" />
+    </div>
+    <div>
+        @Model.ReturnMessage
+    </div>
+}

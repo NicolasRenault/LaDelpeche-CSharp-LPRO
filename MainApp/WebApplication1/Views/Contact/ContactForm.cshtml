@@ -1,0 +1,71 @@
+﻿@model WebApplication1.Models.Form
+@{
+    ViewBag.Title = "Formulaire de contact";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="form-outline">
+        <label class='form-label' for="To">Votre Adresse :</label>
+        <input type="email" id="To" name="To" class="form-control" value="" />
+        <span class="animated flash infinite slower" id="MailAPIResult"></span>
+    </div>
+
+    <div class="form-outline">
+        <label class='form-label' for="Subject">Object :</label>
+        <input type="text" id="Subject" name="Subject" class="form-control" value="" />
+    </div>
+
+    <div class="form-outline">
+        <label class='form-label' for="Text">Expéditeur :</label>
+        <input type="text" id="Text" name="Text" class="form-control" value="" />
+    </div>
+
+    <div class="form-outline">
+        <label class='form-label' for="Body">Texte :</label>
+        <input type="text" id="Body" name="Body" class="form-control" value="" />
+    </div>
+
+    <br />
+
+    <div class="form-outline">
+        <button type="submit" class="btn btn-sm btn-rounded title-nav" style="font-size:15px">Enregistrer</button>
+    </div>
+
+    <div>
+        @ViewBag.ContactMessage
+    </div>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#To").focusout(function () {
+            var model = $(this).val();
+            if (model.trim() != "") {
+                $.ajax({
+                    type: "POST",
+                    url: "/MailAPI/IsValidMail",
+                    data: JSON.stringify({ mail: model }),
+                    dataType: "text",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (result) {
+                        console.log(result);
+                        console.log(typeof result);
+                        if (result == 'true') {
+                            $('#submit').prop("disabled", false);
+                        } else {
+                            $('#submit').prop("disabled", true);
+                            $('#MailAPIResult').html("<i class='fas fa-exclamation-triangle'></i> Ceci n'est pas un mail valide <i class='fas fa-exclamation-triangle'></i>");
+                        }
+                    }
+
+                });
+            }
+        })
+        $("#To").focusin(function () {
+            $('#MailAPIResult').html("");
+        });
+
+    });
+</script>
+

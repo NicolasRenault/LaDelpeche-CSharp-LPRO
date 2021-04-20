@@ -1,0 +1,97 @@
+﻿/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+.mail {
+    text-decoration: underline;
+}
+
+.body-bg {
+    background: #FAE1DD !important;
+    color: #2C3A47 !important;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: black !important;
+    background: #FD7272 !important;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.title-nav {
+    background: #006266 !important;
+    color: #FAE1DD !important;
+}
+
+.title-nav h1 {
+    font-size: 43px;
+    text-decoration: 1px underline;
+}
+
+.nav-link {
+    color: #FAE1DD !important;
+}
+
+.sidenav .bottom {
+    padding-top: 180%;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black !important;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 180px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+#MailAPIResult {
+    color: red !important;
+}
+
+.alert {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #006266 !important;
+    color: #FAE1DD !important;
+    display: none;
+}
+
+.foot {
+    position: fixed;
+    left: 30%;
+    bottom: 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+} 

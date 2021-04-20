@@ -1,0 +1,322 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24A76BFD-8A25-497B-8D6F-23A0D82B0990}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44324</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\addons-pro\cards-extended.min.css" />
+    <Content Include="Content\addons-pro\chat.min.css" />
+    <Content Include="Content\addons-pro\multi-range.min.css" />
+    <Content Include="Content\addons-pro\simple-charts.min.css" />
+    <Content Include="Content\addons-pro\steppers.min.css" />
+    <Content Include="Content\addons-pro\timeline.min.css" />
+    <Content Include="Content\addons\datatables-select.min.css" />
+    <Content Include="Content\addons\datatables-select2.min.css" />
+    <Content Include="Content\addons\datatables.min.css" />
+    <Content Include="Content\addons\datatables2.min.css" />
+    <Content Include="Content\addons\directives.min.css" />
+    <Content Include="Content\addons\flag.min.css" />
+    <Content Include="Content\addons\jquery.zmd.hierarchical-display.min.css" />
+    <Content Include="Content\addons\rating.min.css" />
+    <Content Include="Content\all.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\mdb.css" />
+    <Content Include="Content\mdb.lite.css" />
+    <Content Include="Content\mdb.lite.min.css" />
+    <Content Include="Content\mdb.min.css" />
+    <Content Include="Content\mdb.rtl.min.css" />
+    <Content Include="Content\modules\accordion-extended.min.css" />
+    <Content Include="Content\modules\animations-extended.min.css" />
+    <Content Include="Content\modules\lightbox.min.css" />
+    <Content Include="Content\modules\megamenu.min.css" />
+    <Content Include="Content\modules\parallax.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Script\addons-pro\cards-extended.min.js" />
+    <Content Include="Script\addons-pro\chat.min.js" />
+    <Content Include="Script\addons-pro\multi-range.min.js" />
+    <Content Include="Script\addons-pro\simple-charts.min.js" />
+    <Content Include="Script\addons-pro\steppers.min.js" />
+    <Content Include="Script\addons-pro\timeline.min.js" />
+    <Content Include="Script\addons\datatables-select.min.js" />
+    <Content Include="Script\addons\datatables-select2.min.js" />
+    <Content Include="Script\addons\datatables.min.js" />
+    <Content Include="Script\addons\datatables2.min.js" />
+    <Content Include="Script\addons\directives.min.js" />
+    <Content Include="Script\addons\flag.min.js" />
+    <Content Include="Script\addons\imagesloaded.pkgd.min.js" />
+    <Content Include="Script\addons\jquery.zmd.hierarchical-display.min.js" />
+    <Content Include="Script\addons\masonry.pkgd.min.js" />
+    <Content Include="Script\addons\rating.min.js" />
+    <Content Include="Script\all.min.js" />
+    <Content Include="Script\bootstrap.js" />
+    <Content Include="Script\bootstrap.min.js" />
+    <Content Include="Script\jquery.js" />
+    <Content Include="Script\jquery.min.js" />
+    <Content Include="Script\mdb.js" />
+    <Content Include="Script\mdb.lite.js" />
+    <Content Include="Script\mdb.lite.min.js" />
+    <Content Include="Script\mdb.min.js" />
+    <Content Include="Script\modules\accordion-extended.min.js" />
+    <Content Include="Script\modules\animations-extended.min.js" />
+    <Content Include="Script\modules\buttons.min.js" />
+    <Content Include="Script\modules\cards.min.js" />
+    <Content Include="Script\modules\character-counter.min.js" />
+    <Content Include="Script\modules\chips.min.js" />
+    <Content Include="Script\modules\collapsible.min.js" />
+    <Content Include="Script\modules\dropdown\dropdown-searchable.min.js" />
+    <Content Include="Script\modules\dropdown\dropdown.min.js" />
+    <Content Include="Script\modules\file-input.min.js" />
+    <Content Include="Script\modules\forms-free.min.js" />
+    <Content Include="Script\modules\lightbox.min.js" />
+    <Content Include="Script\modules\material-select\material-select-view-renderer.min.js" />
+    <Content Include="Script\modules\material-select\material-select-view.min.js" />
+    <Content Include="Script\modules\material-select\material-select.min.js" />
+    <Content Include="Script\modules\mdb-autocomplete.min.js" />
+    <Content Include="Script\modules\megamenu.min.js" />
+    <Content Include="Script\modules\parallax.min.js" />
+    <Content Include="Script\modules\preloading.min.js" />
+    <Content Include="Script\modules\range-input.min.js" />
+    <Content Include="Script\modules\scrolling-navbar.min.js" />
+    <Content Include="Script\modules\sidenav.min.js" />
+    <Content Include="Script\modules\smooth-scroll.min.js" />
+    <Content Include="Script\modules\sticky.min.js" />
+    <Content Include="Script\modules\treeview.min.js" />
+    <Content Include="Script\modules\wow.min.js" />
+    <Content Include="Script\popper.js" />
+    <Content Include="Script\popper.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MailAPIController.cs" />
+    <Compile Include="Models\AuthentificationFormulaire.cs" />
+    <Compile Include="Models\Form.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\mdb.min.css.map" />
+    <Content Include="Content\mdb.rtl.min.css.map" />
+    <Content Include="Content\mdb.lite.min.css.map" />
+    <Content Include="Content\addons\datatables-select.min.css.map" />
+    <Content Include="Content\addons\datatables-select2.min.css.map" />
+    <Content Include="Content\addons\datatables.min.css.map" />
+    <Content Include="Content\addons\datatables2.min.css.map" />
+    <Content Include="Content\addons\directives.min.css.map" />
+    <Content Include="Content\addons\flag.min.css.map" />
+    <Content Include="Content\addons\jquery.zmd.hierarchical-display.min.css.map" />
+    <Content Include="Content\addons\rating.min.css.map" />
+    <Content Include="Content\addons-pro\cards-extended.min.css.map" />
+    <Content Include="Content\addons-pro\chat.min.css.map" />
+    <Content Include="Content\addons-pro\multi-range.min.css.map" />
+    <Content Include="Content\addons-pro\simple-charts.min.css.map" />
+    <Content Include="Content\addons-pro\steppers.min.css.map" />
+    <Content Include="Content\addons-pro\timeline.min.css.map" />
+    <Content Include="Content\modules\accordion-extended.min.css.map" />
+    <Content Include="Content\modules\animations-extended.min.css.map" />
+    <Content Include="Content\modules\lightbox.min.css.map" />
+    <Content Include="Content\modules\megamenu.min.css.map" />
+    <Content Include="Content\modules\parallax.min.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\index.cshtml" />
+    <Content Include="Views\Product\CreateProduct.cshtml" />
+    <Content Include="Views\Product\GetAll.cshtml" />
+    <Content Include="Views\Product\EditProduct.cshtml" />
+    <Content Include="Views\Contact\ContactForm.cshtml" />
+    <Content Include="Script\mdb.lite.min.js.map" />
+    <Content Include="Script\mdb.min.js.map" />
+    <Content Include="Script\addons\datatables-select.min.js.map" />
+    <Content Include="Script\addons\datatables-select2.min.js.map" />
+    <Content Include="Script\addons\datatables.min.js.map" />
+    <Content Include="Script\addons\datatables2.min.js.map" />
+    <Content Include="Script\addons\directives.min.js.map" />
+    <Content Include="Script\addons\flag.min.js.map" />
+    <Content Include="Script\addons\imagesloaded.pkgd.min.js.map" />
+    <Content Include="Script\addons\jquery.zmd.hierarchical-display.min.js.map" />
+    <Content Include="Script\addons\masonry.pkgd.min.js.map" />
+    <Content Include="Script\addons\rating.min.js.map" />
+    <Content Include="Script\addons-pro\cards-extended.min.js.map" />
+    <Content Include="Script\addons-pro\chat.min.js.map" />
+    <Content Include="Script\addons-pro\multi-range.min.js.map" />
+    <Content Include="Script\addons-pro\simple-charts.min.js.map" />
+    <Content Include="Script\addons-pro\steppers.min.js.map" />
+    <Content Include="Script\addons-pro\timeline.min.js.map" />
+    <Content Include="Script\modules\accordion-extended.min.js.map" />
+    <Content Include="Script\modules\animations-extended.min.js.map" />
+    <Content Include="Script\modules\buttons.min.js.map" />
+    <Content Include="Script\modules\cards.min.js.map" />
+    <Content Include="Script\modules\character-counter.min.js.map" />
+    <Content Include="Script\modules\chips.min.js.map" />
+    <Content Include="Script\modules\collapsible.min.js.map" />
+    <Content Include="Script\modules\file-input.min.js.map" />
+    <Content Include="Script\modules\forms-free.min.js.map" />
+    <Content Include="Script\modules\lightbox.min.js.map" />
+    <Content Include="Script\modules\mdb-autocomplete.min.js.map" />
+    <Content Include="Script\modules\megamenu.min.js.map" />
+    <Content Include="Script\modules\parallax.min.js.map" />
+    <Content Include="Script\modules\preloading.min.js.map" />
+    <Content Include="Script\modules\range-input.min.js.map" />
+    <Content Include="Script\modules\scrolling-navbar.min.js.map" />
+    <Content Include="Script\modules\sidenav.min.js.map" />
+    <Content Include="Script\modules\smooth-scroll.min.js.map" />
+    <Content Include="Script\modules\sticky.min.js.map" />
+    <Content Include="Script\modules\treeview.min.js.map" />
+    <Content Include="Script\modules\wow.min.js.map" />
+    <Content Include="Script\modules\dropdown\dropdown-searchable.min.js.map" />
+    <Content Include="Script\modules\dropdown\dropdown.min.js.map" />
+    <Content Include="Script\modules\material-select\material-select-view-renderer.min.js.map" />
+    <Content Include="Script\modules\material-select\material-select-view.min.js.map" />
+    <Content Include="Script\modules\material-select\material-select.min.js.map" />
+    <Content Include="Views\Login\LoginForm.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Views\MailAPI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebLib\WebLib.csproj">
+      <Project>{862dcc3a-e825-4c5c-a1f5-59b5922764f1}</Project>
+      <Name>WebLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51338</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44324/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
